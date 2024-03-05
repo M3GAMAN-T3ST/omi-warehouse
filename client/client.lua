@@ -159,7 +159,7 @@ RegisterNetEvent("moon-warehouse:client:openmenu", function(meow)
                 disabled = DisablePoliceRaid,
                 arrow = false, -- puts arrow to the right
                 onSelect = function()
-                    local HasItem = exports['qb-inventory']:HasItem("police_stormram")
+                    local HasItem = exports['ps-inventory']:HasItem("police_stormram")
                     if not HasItem then QBCore.Functions.Notify("You Dont have ".. QBCore.Shared.Items["police_stormram"].label .." To raid this warehouse", "primary", 2500) return end
                     TriggerEvent('animations:client:EmoteCommandStart', {"knock2"})
                     local success = lib.skillCheck({'easy', 'easy', {areaSize = 60, speedMultiplier = 2}, 'hard'}, {'w', 'a', 's', 'd'})
